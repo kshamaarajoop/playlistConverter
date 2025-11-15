@@ -8,8 +8,9 @@ export default function App() {
   const [csvData, setCsvData] = useState('');
 
   // Replace these with your actual Spotify API credentials
-  const CLIENT_ID = env.CLIENT_ID;
-  const CLIENT_SECRET = env.CLIENT_SECRET;
+  const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
+  const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET;
+
 
   const extractPlaylistId = (url) => {
     const match = url.match(/playlist\/([a-zA-Z0-9]+)/);
